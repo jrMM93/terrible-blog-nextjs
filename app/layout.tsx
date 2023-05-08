@@ -1,6 +1,6 @@
+import { Layout } from "~/components/Layout/layout";
 import "./globals.css";
 import Providers from "./providers";
-import { Header } from "~/components/Layout/Header";
 
 export const metadata = {
   title: "Terrible Blog",
@@ -16,9 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          {/* @ts-expect-error Server Component */}
-          <Header />
-          {children}
+          <Layout>{children}</Layout>
         </Providers>
       </body>
     </html>
