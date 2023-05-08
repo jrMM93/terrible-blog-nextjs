@@ -1,17 +1,14 @@
-import { Layout } from "~/components/Layout/layout";
-import "./globals.css";
-import Providers from "./providers";
+import { Layout } from '~/components/Layout/layout';
+import './globals.css';
+import Providers from './providers';
+import type { PropsWithChildren } from 'react';
 
 export const metadata = {
-  title: "Terrible Blog",
-  description: "Very bad blog app created by Jeremy Antoni",
+  title: 'Terrible Blog',
+  description: 'Very bad blog app created by Jeremy Antoni',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body>

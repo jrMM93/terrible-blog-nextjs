@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import { PrismaClient } from "@prisma/client";
+import { faker } from '@faker-js/faker';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -75,11 +75,13 @@ main()
   .then(async () => {
     await prisma.$disconnect();
   })
+  // eslint-disable-next-line unicorn/prefer-top-level-await
   .catch(async (error) => {
     // eslint-disable-next-line no-console
     console.error(error);
 
     await prisma.$disconnect();
 
+    // eslint-disable-next-line unicorn/no-process-exit
     process.exit(1);
   });

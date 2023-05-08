@@ -1,6 +1,6 @@
-import { getSession } from "~/lib/auth/nextAuth";
-import { LoginButton, LogoutButton } from "./AuthButtons";
-import Link from "next/link";
+import { getSession } from '~/lib/auth/nextAuth';
+import { LoginButton, LogoutButton } from './AuthButtons';
+import Link from 'next/link';
 
 export const Header = () => {
   return (
