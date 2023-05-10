@@ -8,7 +8,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
       <Header />
       <div className="flex h-full">
         <Sidebar />
-        <div className="h-full">{children}</div>
+        {children}
       </div>
     </div>
   );
