@@ -15,7 +15,7 @@ export const authOptions: AuthOptions = {
     }),
     // ...add more providers here
   ],
-  debug: true,
+  // debug: true,
 };
 
 const handler = NextAuth(authOptions);

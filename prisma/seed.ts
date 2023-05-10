@@ -49,13 +49,14 @@ const main = async () => {
     });
 
     const randomWorldCount = faker.datatype.number({
-      min: 25,
-      max: 50,
+      min: 35,
+      max: 55,
     });
 
     const post = {
       title: faker.lorem.sentence(3),
       content: faker.lorem.sentence(randomWorldCount),
+      image: faker.image.cats(600, 350, true),
       slug: faker.lorem.slug(3),
       authorId: users[randomUserIndex].id,
       categoryId: categories[randomCategoryIndex].id,

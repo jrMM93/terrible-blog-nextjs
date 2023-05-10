@@ -4,6 +4,7 @@ const PostScheme = z.object({
   id: z.string(),
   title: z.string(),
   content: z.string(),
+  image: z.string(),
   slug: z.string().nullable(),
   createdAt: z.string(),
   updatedAt: z.string(),

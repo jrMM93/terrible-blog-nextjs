@@ -6,6 +6,7 @@ const selectPostQuery = () =>
     id: true,
     title: true,
     content: true,
+    image: true,
     slug: true,
     createdAt: true,
     updatedAt: true,
