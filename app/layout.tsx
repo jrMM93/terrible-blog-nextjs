@@ -1,6 +1,6 @@
 import { Layout } from '~/components/Layout/layout';
 import './globals.css';
-import Providers from './providers';
+import { Providers } from './providers';
 import type { PropsWithChildren } from 'react';
 
 export const metadata = {
