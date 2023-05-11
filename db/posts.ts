@@ -44,3 +44,26 @@ export const getPosts = async (page = 0) => {
   // console.log(fixedPosts);
   return fixedPosts;
 };
+
+export const getpost = async (slug: string) => {
+  const post = await prisma.post.findUnique({
+    where: {
+      slug,
+    },
+    select: {
+      ...selectPostQuery(),
+    },
+  });
+
+  if (!post) {
+    return post;
+  }
+
+  const fixedPost = {
+    ...post,
+    createdAt: post.createdAt.toISOString(),
+    updatedAt: post.updatedAt.toISOString(),
+  };
+
+  return fixedPost;
+};

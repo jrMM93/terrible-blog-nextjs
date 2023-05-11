@@ -9,7 +9,7 @@ import { postKeys } from '~/lib/query/postQuery';
 import { PostsScheme } from '~/lib/scheme/post';
 
 const getPosts = async (signal?: AbortSignal, page = 0) =>
-  client(`/api/posts?page=${page}`, { signal, zodSchema: PostsScheme });
+  client(`/posts?page=${page}`, { signal, zodSchema: PostsScheme });
 
 const useInfinitePosts = (defaultPosts: TPostsPage) =>
   useInfiniteQuery({
